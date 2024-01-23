@@ -72,7 +72,7 @@ const cargarPeliculas = async () => {
         //ACCESO A LOS DATOS
 
         //Una vez se resuelve la peticíon y obtenemos la respuesta, accederemos a los datos de la respuesta
-        //La información nos la devuelve en forma JSON, con la constante respesta que guarda la petición con la respuesta y el método .JSON podremos acceder
+        //La información nos la devuelve en forma JSON, con la constante respuesta que guarda la petición con la respuesta y el método .JSON podremos acceder
         //a la información json que nos devuelve la petición, éste método json también es asincrono así que tendremos que esperar a que acabe por lo tanto
         //usaremos await (esperar) igual que lo hicimos con la petición al enPoint de la API de Películas, también tendremos que guardar el resultado en 
         //algun sitio, en una variable llamada datos.   const datos = await respuesta.json();
@@ -81,7 +81,7 @@ const cargarPeliculas = async () => {
 
         //Filtraremos los errores con status, el código de respuesta que nos devuelve
         if (respuesta.status === 200) {  //si es 200 = código correcto, estado ok ejecutame el acceso a los datos
-
+            //guardamos los datos de la respuesta
             const datos = await respuesta.json();
             // console.log(datos.results); prueba mostrar resultados
 
@@ -141,4 +141,3 @@ const cargarPeliculas = async () => {
 cargarPeliculas();
 
 
-//https://youtu.be/PNr8-JDMinU
